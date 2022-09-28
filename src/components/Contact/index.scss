@@ -115,9 +115,7 @@
 
 @media screen and (max-width: 950px) {
   .map-wrap {
-    float: none;
-    margin: 0;
-    width: 100%;
+    display: none;
   }
 
   .info-map {

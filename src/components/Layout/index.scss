@@ -114,6 +114,10 @@
 .container.work-page {
   right: 0;
   position: relative;
+
+  .movile-link {
+    color: #15ec0d;
+  }
   .video-zone {
     width: 600px;
     right: 0;
@@ -137,7 +141,6 @@
       left: 0;
       z-index: 999999999;
       width: 200px;
-      height: 100px1;
       padding: 10px;
       color: #fff;
       font-family: 'Helvetica';
@@ -328,21 +331,16 @@
         display: block;
         padding: 20px;
         box-sizing: border-box;
-        overflow-x: visible;
+        overflow-y: visible;
       }
     }
   }
 
-  .info-video {
+  .video-zone {
     display: none;
   }
-
-  .video-zone {
-    display: inline-block;
-    width: 100%;
-    right: 0;
-    position: relative;
-    align-items: center;
+  video {
+    display: none;
   }
 
   .stage-cube-cont {

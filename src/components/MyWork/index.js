@@ -41,7 +41,13 @@ const MyWork = () => {
           <p>
             Here you can see some of the projects I've worked in by myself or as
             a part of a team, this projects where made during my learning path
-            at Henry!
+            at Henry! If you are on a mobile device try looking at the links
+            below to visit my deploys, else if you are on a desktop check out
+            the link besides the video player!
+          </p>
+
+          <p className="movile-link" onClick={goToPage}>
+            Check out my Pokemon website! 😼
           </p>
         </div>
         <div className="video-zone">
