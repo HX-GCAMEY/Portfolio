@@ -1,6 +1,7 @@
 import './index.scss';
 import { useState, useEffect } from 'react';
 import Logo from '../../assets/images/logo.png';
+import me from '../../assets/images/me.jpg';
 import { Link } from 'react-router-dom';
 import AnimatedLetter from '../AnimatedLetters';
 import LogoBig from './Logo';
@@ -64,6 +65,9 @@ const Home = () => {
           <Link className="flat-button" to="/contact">
             CONTACT ME!
           </Link>
+          <div className="profile-pic">
+            <img src={me} alt="profile-pic" className="pic" />
+          </div>
         </div>
         <LogoBig />
       </div>

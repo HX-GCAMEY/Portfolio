@@ -6,6 +6,24 @@
     transform: translateY(-50%);
     width: 40%;
     max-height: 90%;
+
+    .profile-pic {
+      width: 120px;
+      right: -130px;
+      bottom: 3px;
+      position: relative;
+      opacity: 0;
+      border-radius: 8px;
+      animation: fadeIn 2.2s ease-in-out both;
+      animation-delay: 1.4s;
+      z-index: 9999;
+
+      .pic {
+        width: 100%;
+        position: absolute;
+        border-radius: 8px;
+      }
+    }
   }
 
   h1 {
@@ -38,6 +56,7 @@
       opacity: 0.6;
     }
   }
+
   .imagen {
     width: 140px;
     position: absolute;
