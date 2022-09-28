@@ -135,9 +135,20 @@
     height: auto;
     min-height: auto;
 
-    ul,
     nav {
       display: none;
+    }
+
+    ul {
+      position: relative;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      display: block;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      margin: 0;
     }
 
     nav {

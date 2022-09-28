@@ -328,8 +328,21 @@
         display: block;
         padding: 20px;
         box-sizing: border-box;
+        overflow-x: visible;
       }
     }
+  }
+
+  .info-video {
+    display: none;
+  }
+
+  .video-zone {
+    display: inline-block;
+    width: 100%;
+    right: 0;
+    position: relative;
+    align-items: center;
   }
 
   .stage-cube-cont {

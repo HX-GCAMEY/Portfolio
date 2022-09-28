@@ -27,7 +27,12 @@ const Sidebar = () => {
         <img src={LogoGC} alt="logo" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink exact="true" activeclassname="active" to="/">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon
             icon={faHome}
             color="#4d4d4e"
@@ -41,7 +46,11 @@ const Sidebar = () => {
           to="/about"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faUser}
+            color="#4d4d4e"
+            onClick={() => setShowNav(false)}
+          />
         </NavLink>
         <NavLink
           exact="true"
@@ -50,7 +59,11 @@ const Sidebar = () => {
           to="/contact"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            color="#4d4d4e"
+            onClick={() => setShowNav(false)}
+          />
         </NavLink>
         <NavLink
           exact="true"
@@ -59,7 +72,11 @@ const Sidebar = () => {
           to="/work"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faCode}
+            color="#4d4d4e"
+            onClick={() => setShowNav(false)}
+          />
         </NavLink>
       </nav>
       <ul>
