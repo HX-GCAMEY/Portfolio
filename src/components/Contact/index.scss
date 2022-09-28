@@ -1,0 +1,127 @@
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+      clear: both;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    width: 100%;
+    border: 0;
+    background: #115173;
+    height: 20px;
+    font-size: 13px;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #115173;
+    height: 30px;
+    font-size: 13px;
+    color: #fff;
+    padding: 10px;
+    min-height: 60px;
+    box-sizing: border-box;
+  }
+
+  .flat-button {
+    color: #15ec0d;
+    background: 0 0;
+    font: 11px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1 px solid #15ec0d;
+    float: right;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 10px;
+  }
+}
+
+.map-wrap {
+  background: rgba(8, 253, 216, 0.1);
+  float: right;
+  width: 53%;
+  height: 115%;
+}
+
+.leaflet-container {
+  position: absolute;
+  width: 400px;
+  right: 0;
+  height: 100vh;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.info-map {
+  position: absolute;
+  background: #000;
+  top: 10px;
+  right: 90px;
+  z-index: 999999999;
+  width: 200px;
+  height: 100px1;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 12px;
+    display: block;
+    padding-top: 20px;
+    color: #15ec0d;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .map-wrap {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: 400px;
+  }
+
+  .info-map {
+    display: none;
+  }
+}
