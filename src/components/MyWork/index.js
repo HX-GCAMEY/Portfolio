@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import AnimatedLetter from '../AnimatedLetters';
 import { Loader } from 'react-loaders';
 import pokemonpi from '../../assets/videos/pokemon-pi.mp4';
+import flymate from '../../assets/videos/FlyMate.mp4';
 
 const MyWork = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -43,35 +44,57 @@ const MyWork = () => {
             a part of a team, this projects where made during my learning path
             at Henry! If you are on a mobile device try looking at the links
             below to visit my deploys, else if you are on a desktop check out
-            the link besides the video player!
+            the link beside the video player!
           </p>
 
           <p className="movile-link" onClick={goToPage}>
             Check out my Pokemon website! 😼
           </p>
         </div>
-        <div className="video-zone">
-          <div className={toggleSize ? 'info-video' : 'info-hidden'}>
-            <span>Pokemon PI</span>
-            <br />
-            A fun pokemon website that
-            <br />
-            was a part of a proyect on Henry
-            <br />
-            bootcamp
-            <br />
-            <p onClick={goToPage}>
-              Go to the page
-              <br /> or click the video to enlarge 😼
-            </p>
+        <div className="video-container">
+          <div className="video-zone">
+            <div className={toggleSize ? 'info-video' : 'info-hidden'}>
+              <span>Pokemon PI</span>
+              <br />
+              A fun pokemon website that
+              <br />
+              was a part of a proyect on Henry
+              <br />
+              bootcamp
+              <br />
+              <p onClick={goToPage}>
+                Go to the page
+                <br /> or click the video to enlarge 😼
+              </p>
+            </div>
+            <video
+              src={pokemonpi}
+              autoPlay={true}
+              muted={true}
+              width={toggleSize ? '70%' : '180%'}
+              onClick={resizeVideo}
+            />
           </div>
-          <video
-            src={pokemonpi}
-            autoPlay={true}
-            muted={true}
-            width={toggleSize ? '70%' : '180%'}
-            onClick={resizeVideo}
-          />
+          <div className="video-zone2">
+            <div className={toggleSize ? 'info-video' : 'info-hidden'}>
+              <span>FlyMate App</span>
+              <br />
+              An app to search and purchase flight tickets
+              <br />
+              was a part of a proyect on Henrybootcamp
+              <br />
+              made with React Native
+              <br />
+              <p onClick={goToPage}>Click the video to enlarge 😼</p>
+            </div>
+            <video
+              src={flymate}
+              autoPlay={true}
+              muted={true}
+              width={toggleSize ? '70%' : '180%'}
+              onClick={resizeVideo}
+            />
+          </div>
         </div>
       </div>
       <Loader type="cube-transition" />
