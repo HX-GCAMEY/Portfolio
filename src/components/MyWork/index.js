@@ -7,7 +7,8 @@ import flymate from '../../assets/videos/FlyMate.mp4';
 
 const MyWork = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  let [toggleSize, setToggleSize] = useState(true);
+  let [toggleSizeA, setToggleSizeA] = useState(true);
+  let [toggleSizeB, setToggleSizeB] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,12 +21,17 @@ const MyWork = () => {
     window.open('https://pipoke.vercel.app/');
   };
 
-  const resizeVideo = () => {
-    if (toggleSize) {
-      setToggleSize(false);
-    } else {
-      setToggleSize(true);
-    }
+  const closeButton = () => {
+    setToggleSizeA(true);
+    setToggleSizeB(true);
+  };
+
+  const resizeVideoA = () => {
+    setToggleSizeA(false);
+  };
+
+  const resizeVideoB = () => {
+    setToggleSizeB(false);
   };
 
   return (
@@ -52,8 +58,12 @@ const MyWork = () => {
           </p>
         </div>
         <div className="video-container">
-          <div className="video-zone">
-            <div className={toggleSize ? 'info-video' : 'info-hidden'}>
+          <div className={toggleSizeA ? 'video-zone' : 'video-zone-active'}>
+            <div
+              className={
+                (toggleSizeB, toggleSizeA) ? 'info-video' : 'info-hidden'
+              }
+            >
               <span>Pokemon PI</span>
               <br />
               A fun pokemon website that
@@ -68,15 +78,25 @@ const MyWork = () => {
               </p>
             </div>
             <video
+              className={toggleSizeA ? 'pokemon-inactive' : 'pokemon-active'}
               src={pokemonpi}
               autoPlay={true}
-              muted={true}
-              width={toggleSize ? '70%' : '180%'}
-              onClick={resizeVideo}
+              muted={toggleSizeA ? true : false}
+              onClick={resizeVideoA}
             />
+            <button
+              className={toggleSizeA ? 'button-inactive' : 'button-active'}
+              onClick={closeButton}
+            >
+              X
+            </button>
           </div>
-          <div className="video-zone2">
-            <div className={toggleSize ? 'info-video' : 'info-hidden'}>
+          <div className={toggleSizeB ? 'video-zone2' : 'video-zone-active'}>
+            <div
+              className={
+                (toggleSizeB, toggleSizeA) ? 'info-video' : 'info-hidden'
+              }
+            >
               <span>FlyMate App</span>
               <br />
               An app to search and purchase flight tickets
@@ -88,12 +108,18 @@ const MyWork = () => {
               <p onClick={goToPage}>Click the video to enlarge 😼</p>
             </div>
             <video
+              className={toggleSizeB ? 'flymate-inactive' : 'flymate-active'}
               src={flymate}
               autoPlay={true}
-              muted={true}
-              width={toggleSize ? '70%' : '180%'}
-              onClick={resizeVideo}
+              muted={toggleSizeB ? true : false}
+              onClick={resizeVideoB}
             />
+            <button
+              className={toggleSizeB ? 'button-inactive' : 'button-active'}
+              onClick={closeButton}
+            >
+              X
+            </button>
           </div>
         </div>
       </div>
