@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const refForm = useRef();

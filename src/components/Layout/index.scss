@@ -1,3 +1,7 @@
+.App {
+  height: 100%;
+}
+
 .page {
   width: 100%;
   height: 100%;
@@ -26,7 +30,7 @@
 .container {
   width: 100%;
   will-change: contents;
-  height: 90%;
+  height: 100%;
   min-height: 566px;
   position: relative;
   opacity: 0;
@@ -78,7 +82,7 @@
     top: 220px;
     transform: translateY(-50%);
     width: 35%;
-    max-height: 90%;
+    max-height: 100%;
     vertical-align: middle;
     display: table-cell;
   }
@@ -112,109 +116,23 @@
 }
 
 .container.work-page {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+  padding-top: 100px;
+
   .movile-link {
     color: #15ec0d;
   }
 
   .video-container {
-    position: absolute;
-    height: 100vh;
-    width: 600px;
-    right: 0;
-
     .video-zone {
-      width: 550px;
-      right: 0;
-      top: 0;
-      height: 50vh;
-      position: absolute;
-
-      video {
-        position: absolute;
-        right: 0;
-        top: 20px;
-      }
-
       .info-hidden {
         display: none;
-      }
-
-      .info-video {
-        background: #000;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        z-index: 999;
-        width: 200px;
-        padding: 10px;
-        color: #fff;
-        font-family: 'Helvetica';
-        font-size: 16px;
-        font-weight: 300;
-        opacity: 0;
-        animation: fadeIn 0.3s 0.3s;
-        animation-fill-mode: forwards;
-
-        p {
-          text-decoration: none;
-          color: #15ec0d;
-        }
-        span {
-          font-size: 18px;
-          display: block;
-          padding-top: 20px;
-          color: #15ec0d;
-        }
-      }
-    }
-
-    .video-zone2 {
-      width: 550px;
-      bottom: 0;
-      right: 0;
-      height: 50vh;
-      position: absolute;
-
-      video {
-        position: absolute;
-        right: 0;
-        top: 20px;
-      }
-
-      .info-hidden {
-        display: none;
-      }
-
-      .info-video {
-        background: #000;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        z-index: 999999999;
-        width: 200px;
-        padding: 10px;
-        color: #fff;
-        font-family: 'Helvetica';
-        font-size: 16px;
-        font-weight: 300;
-        opacity: 0;
-        animation: fadeIn 0.3s 0.3s;
-        animation-fill-mode: forwards;
-
-        p {
-          text-decoration: none;
-          color: #15ec0d;
-        }
-        span {
-          font-size: 18px;
-          display: block;
-          padding-top: 20px;
-          color: #15ec0d;
-        }
       }
     }
   }
+
   h1 {
     font-size: 53px;
     font-family: 'Coolvetica';
@@ -250,18 +168,13 @@
   }
 
   .text-zone {
-    position: absolute;
-    left: 180px;
-    top: 220px;
-    transform: translateY(-50%);
-    width: 35%;
-    max-height: 90%;
-    vertical-align: middle;
-    display: table-cell;
+    width: 50%;
+
+    max-height: 100%;
   }
 
   p {
-    font-style: 13px;
+    font-size: 16px;
     color: #fff;
     font-family: sans-serif;
     font-weight: 300;
@@ -329,7 +242,7 @@
     top: 240px;
     transform: translateY(-50%);
     width: 35%;
-    max-height: 90%;
+    max-height: 100%;
     vertical-align: middle;
     display: table-cell;
   }
@@ -367,6 +280,13 @@
     position: initial;
   }
 
+  .container.work-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
   .container {
     position: initial;
     height: 100%;
@@ -395,31 +315,10 @@
   }
 
   .video-container {
+    width: 100%;
     display: flex;
     margin: 2px;
     flex-direction: column;
     left: 0px;
-  }
-
-  .pokemon-inactive {
-    width: 300px;
-    position: absolute;
-    left: 0;
-    overflow: hidden;
-  }
-
-  .video-zone2 {
-    position: relative;
-    top: 200px;
-  }
-  .flymate-inactive {
-    width: 300px;
-    position: absolute;
-    left: 0;
-    overflow: visible;
-  }
-
-  .info-video {
-    display: none;
   }
 }
