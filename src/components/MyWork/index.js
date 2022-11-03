@@ -19,7 +19,7 @@ const MyWork = () => {
     },
     {
       video: modelo,
-      text: 'Contact SPA created with React JS for a small locall business with an Email JS library connection with a fully responsive image gallery',
+      text: 'Contact SPA created with React JS for a local business with an Email JS library connection and a fully responsive image gallery',
       title: 'Imprenta Modelo',
       site: 'http://imprentamodelo.com/',
     },
