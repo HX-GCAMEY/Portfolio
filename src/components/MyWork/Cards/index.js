@@ -129,7 +129,7 @@ const Cards = ({ gallery }) => {
                       autoPlay={true}
                     />
                   ) : (
-                    <img alt="project" src={slide.image} />
+                    <img className="project-image" alt="project" src={slide.image} />
                   )}
                 </div>
               );
