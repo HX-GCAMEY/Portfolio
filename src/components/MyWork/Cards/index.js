@@ -120,12 +120,17 @@ const Cards = ({ gallery }) => {
                       </span>
                     ) : null}
                   </div>
-                  <video
-                    muted={true}
-                    onClick={() => handleOpenModal(index)}
-                    src={slide.video}
-                    autoPlay={true}
-                  />
+
+                  {slide.video ? (
+                    <video
+                      muted={true}
+                      onClick={() => handleOpenModal(index)}
+                      src={slide.video}
+                      autoPlay={true}
+                    />
+                  ) : (
+                    <img alt="project" src={slide.image} />
+                  )}
                 </div>
               );
             })}

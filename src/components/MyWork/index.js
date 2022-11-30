@@ -23,6 +23,13 @@ const MyWork = () => {
       title: 'Imprenta Modelo',
       site: 'http://imprentamodelo.com/',
     },
+    {
+      image:
+        'https://res.cloudinary.com/dtfz9e5yp/image/upload/v1669842223/Screenshot_20221130_030223_tdxkzm.png',
+      text: 'Simple SPA part of an Udemy lab to undersatnd the use of react class components',
+      title: 'Monster Rolodex',
+      site: 'https://monster-rolodex-gama.vercel.app/',
+    },
   ];
   return (
     <div className="work">
