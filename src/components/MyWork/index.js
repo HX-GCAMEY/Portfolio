@@ -6,6 +6,13 @@ import modelo from '../../assets/videos/modelo.mp4';
 const MyWork = () => {
   const gallery = [
     {
+      image:
+        'https://res.cloudinary.com/dtfz9e5yp/image/upload/v1671121174/crwne_zqgsul.png',
+      text: 'E-comerce created as a project of Udemy Complete React Developer using',
+      title: 'CRWN CLOTHING',
+      site: 'https://crwn-zeta.vercel.app/',
+    },
+    {
       video: flymate,
       text: 'App created with React Native and Mongo DB to search and purchase flight tickets with google login interface and regularloggin authenticated with JWT  and a backend REST API created with NODE and EXPRESS ',
       title: 'Flymate App',
